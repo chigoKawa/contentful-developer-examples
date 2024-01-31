@@ -1,0 +1,57 @@
+# Installing the Contentful CLI tool
+https://www.contentful.com/developers/docs/tutorials/cli/installation/
+
+# Authenticating
+https://www.contentful.com/developers/docs/tutorials/cli/authentication/
+
+# Configuring
+https://www.contentful.com/developers/docs/tutorials/cli/config-management/
+https://github.com/contentful/contentful-migration
+
+
+
+
+
+
+# Fields
+
+Symbol (Short text)
+Text (Long text)
+Integer
+Number
+Date
+Boolean
+Object
+Location
+RichText
+Array (requires items)
+Link (requires linkType)
+https://www.contentful.com/developers/docs/concepts/data-model/
+
+# TS example
+https://github.com/contentful/contentful-migration/blob/master/examples/16-typescript-migration.ts
+
+# CI/CD
+https://www.contentful.com/developers/docs/tutorials/general/continuous-integration-with-circleci/
+
+
+# Cheat sheet
+https://miro.com/app/board/uXjVOJpRmEA=/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
