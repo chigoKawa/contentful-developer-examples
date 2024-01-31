@@ -1,6 +1,6 @@
 
 ## Getting Started
-This repository serves as a practical guide on utilizing the [Contentful CLI Tool] for various common scenarios.
+This repository serves as a practical guide on utilizing the [Contentful CLI Tool] for various common scenarios. Makes more sense if you attend the [Contentful Learning Center] training class. 
 
 ##### Folder structure:
 
@@ -99,3 +99,4 @@ Reach out if you have any questions [Chigoridim]
 
    [Chigoridim]: <https://chigoriddim.com>
    [Contentful CLI Tool]: <https://github.com/contentful/contentful-cli>
+   [Contentful Learning Center]: <https://training.contentful.com>
