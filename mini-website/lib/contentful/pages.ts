@@ -69,7 +69,7 @@ export const fetchPageWithSlug = async ({
   try {
     const response = await client(preview).getEntries({
       content_type: CONTENT_TYPE_NAME,
-      "fields.slug[match]": slug,
+      "fields.slug": slug,
       include: INCLUDES_COUNT,
     });
     return response.items?.[0];

@@ -93,10 +93,10 @@ contentful space migration --space-id "[your-space-id]" --environment-id "[your-
 
 MIT
 
-Reach out if you have any questions [Chigoridim]
+Reach out if you have any questions [Chigoriddim]
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
-   [Chigoridim]: <https://chigoriddim.com>
+   [Chigoriddim]: <https://chigoriddim.com>
    [Contentful CLI Tool]: <https://github.com/contentful/contentful-cli>
    [Contentful Learning Center]: <https://training.contentful.com>
