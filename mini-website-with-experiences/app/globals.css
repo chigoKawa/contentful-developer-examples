@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components{
+  .base-btn {
+    @apply p-4 font-semibold uppercase tracking-wider leading-normal cursor-pointer transition-all duration-200 ease-linear bg-gradient-to-b from-transparent
+  }
+  .btn-primary2{
+    @apply bg-jpl-red  text-white hover:bottom-0 hover:to-jpl-red-dark
+  }
+  .btn-primary{
+    @apply px-12 bg-jpl-red text-white hover:text-white  hover:to-jpl-red-dark
+  }
+  .btn-secondary{
+    @apply px-12 bg-transparent text-jpl-red hover:text-white border-2 border-jpl-red hover:to-jpl-red-dark
+  }
+  .btn-dark{
+    @apply px-12 bg-jpl-gray-dark border-[0.5px] text-jpl-off-white border-jpl-gray-mid hover:to-jpl-gray-light hover:bg-jpl-off-white hover:text-jpl-gray-dark
+  }
+
+  .jpl-text-h1{
+    @apply font-medium tracking-tighter;
+    line-height: 1.15; 
+
+
+    @screen sm {
+
+    }
+    @screen md {
+
+      letter-spacing: -1.5px;
+    }
+    @screen lg {
+
+    }
+    @screen xl {
+   
+    }
+  }
+
+  .jpl-text-h2{
+    @apply font-medium -tracking-tight; 
+    line-height: 1.25;
+    font-size: pxToRem(200);
+  }
+  
+
+}
+
+
+

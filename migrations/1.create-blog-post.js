@@ -12,7 +12,11 @@ module.exports = function (migration) {
   // Fields -> https://www.contentful.com/developers/docs/concepts/data-model/
 
   const title = blogPost.createField("title");
-  title.name("Title").type("Symbol").required(true).validations([]);
+  title
+    .name("Title")
+    .type("Symbol")
+    .required(true)
+    .validations([{ unique: true }]);
 
   //   Post Author field
   const author = blogPost.createField("author");

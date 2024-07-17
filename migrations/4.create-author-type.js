@@ -29,6 +29,8 @@ module.exports = function (migration) {
     .name("Post Author")
     .validations([{ linkContentType: [AUTHOR_CONTENTTYPE_ID] }]);
 
+  blogPost.moveField("authorRef").afterField("title");
+
   // derive new 'author' entries from existing values in Blog posts
 
   migration.deriveLinkedEntries({

@@ -40,8 +40,8 @@ module.exports = function (migration) {
       const [authorFirstName, authorLastName] = currentAuthorName.split(" ");
 
       return {
-        authorFirstName,
-        authorLastName,
+        authorFirstName: authorFirstName || "NULL",
+        authorLastName: authorLastName || "NULL",
       };
     },
   });
