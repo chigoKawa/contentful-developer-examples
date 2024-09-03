@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const { nextui } = require("@nextui-org/react");
 
 const config: Config = {
   content: [
@@ -23,7 +24,6 @@ const config: Config = {
         "jpl-gray-mid": "#949494",
         "jpl-gray-mid-dark": "#6F6F6F",
         "jpl-gray-dark": "#222222",
-  
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -31,16 +31,16 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       animation: {
-        'bg-color-nimation': 'spin 3s linear forwards',
+        "bg-color-nimation": "spin 3s linear forwards",
       },
       keyframes: {
         "bg-color-nimation": {
-          'from': { backgroundPosition: "0 0" },
-          'to': { backgroundPosition: "0 100%" },
-        }
-      }
+          from: { backgroundPosition: "0 0" },
+          to: { backgroundPosition: "0 100%" },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [nextui()],
 };
 export default config;

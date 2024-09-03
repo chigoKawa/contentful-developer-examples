@@ -2,46 +2,35 @@ import { ComponentDefinition } from "@contentful/experiences-sdk-react";
 
 // https://www.contentful.com/developers/docs/experiences/component-definition-schema/
 
-const thumbnailUrl =
-  "https://images.ctfassets.net/drya7kvck7n6/7wrYr53XFL9jeOOwLvh0Sq/49d80dc701b46848be1a57157a460436/image.png";
-
-export const studioButtonDefinition: ComponentDefinition = {
-  id: "button",
-  name: "Button",
-  category: "Base",
-  thumbnailUrl: thumbnailUrl,
-  builtInStyles: ["cfBackgroundColor"],
+export const studioAnnouncementDefinition: ComponentDefinition = {
+  id: "announcement",
+  name: "Announcement",
+  category: "Blocks",
+  builtInStyles: [],
   tooltip: {
     // imageUrl: thumbnailUrl,
     description: "Add a button to the canvas",
   },
   variables: {
     // there are two types of variables, content variables and design variables
-    label: {
-      displayName: "Label",
+    message: {
+      displayName: "Message",
       type: "Text", //  'Text' | 'RichText' | 'Number' | 'Date' | 'Boolean' | 'Location' | 'Media' | 'Object' | 'Hyperlink' | 'Link' | 'Array';
-      defaultValue: "Click Here",
+      defaultValue: "Your message goes here",
       group: "content",
     },
     variant: {
       displayName: "Variant",
       type: "Text",
-      defaultValue: "primary",
+      defaultValue: "default",
       group: "style", // Possible values: style, content
       validations: {
         in: [
-          { value: "primary", displayName: "Primary" },
-          { value: "secondary", displayName: "Secondary" },
-          { value: "dark", displayName: "Dark" },
-          { value: "accent", displayName: "Accent" },
+          { value: "default", displayName: "Default" },
+          { value: "danger", displayName: "Danger" },
+          { value: "success", displayName: "Success" },
         ],
       },
-    },
-    url: {
-      displayName: "URL",
-      type: "Hyperlink",
-      defaultValue: "/",
-      hyperlinkPattern: "/{locale}/experience/{entry.fields.slug}",
     },
 
     random: {
@@ -56,33 +45,6 @@ export const studioButtonDefinition: ComponentDefinition = {
         ],
         linkType: "Entry",
       },
-    },
-    sideEffect: {
-      displayName: "Side Effect",
-      type: "Text",
-      defaultValue: "alertMe",
-      group: "style",
-      validations: {
-        in: [
-          { value: "alertMe", displayName: "Open Alert" },
-          { value: "consoleLog", displayName: "Log to console" },
-        ],
-      },
-    },
-    // bind to a string list
-    listText: {
-      displayName: "List Text",
-      type: "Array",
-    },
-    // bind to an entry reference
-    entryReference: {
-      displayName: "Entry Reference",
-      type: "Link",
-    },
-    // bind to a list of entries
-    listReference: {
-      displayName: "List Entry Reference",
-      type: "Array",
     },
   },
 };

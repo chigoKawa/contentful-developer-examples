@@ -17,6 +17,9 @@ const studioCardDefinition: ComponentDefinition = {
       displayName: "Image",
       type: "Media",
       description: "Image to display",
+      // defaultValue: {
+      //   url: "https://nextui.org/images/hero-card-complete.jpeg",
+      // },
     },
     cfImageOptions: {
       displayName: "Image options",
@@ -29,6 +32,10 @@ const studioCardDefinition: ComponentDefinition = {
         objectPosition: "center center",
         quality: "100",
         targetSize: "500px",
+        // backgroundImage: {
+        //   url: "https://nextui.org/images/hero-card-complete.jpeg",
+        // },
+        // url: "https://nextui.org/images/hero-card-complete.jpeg",
       },
     },
   },

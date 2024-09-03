@@ -20,13 +20,17 @@ import StudioCard from "../components/studio-card/studio-card";
 
 import studioCardDefinition from "../components/studio-card/studio-card.definition";
 
+import { StudioAnnouncement } from "../components/studio-announcement/studio-announcement";
+import { studioAnnouncementDefinition } from "../components/studio-announcement/studio-announcement.definition";
+
 // Define components
 const components = [
   { component: StudioButton, definition: studioButtonDefinition },
   { component: StudioImage, definition: studioImageDefinition },
   { component: StudioLink, definition: studioLinkDefinition },
   { component: StudioHero, definition: studioHeroDefinition },
-  {component: StudioCard, definition: studioCardDefinition}
+  { component: StudioCard, definition: studioCardDefinition },
+  { component: StudioAnnouncement, definition: studioAnnouncementDefinition },
 ];
 
 // Register components
@@ -39,7 +43,6 @@ defineComponents(
       CONTENTFUL_COMPONENTS.richText.id,
       CONTENTFUL_COMPONENTS.text.id,
       CONTENTFUL_COMPONENTS.image.id,
-   
     ],
   } // Defined built-in components
 );

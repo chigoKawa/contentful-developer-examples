@@ -1,8 +1,6 @@
+import type { ComponentDefinition } from "@contentful/experiences-sdk-react";
 
-import { ComponentDefinition } from "@contentful/experiences-sdk-react";
-
-
-export  const studioImageDefinition: ComponentDefinition = {
+export const studioImageDefinition: ComponentDefinition = {
   id: "customImage",
   name: "Image",
   category: "Blocks",
@@ -10,7 +8,7 @@ export  const studioImageDefinition: ComponentDefinition = {
   variables: {
     imageUrl: {
       displayName: "Image Url",
-      type: "Text",
+      type: "Media",
       defaultValue: "https://picsum.photos/500",
     },
     width: {
