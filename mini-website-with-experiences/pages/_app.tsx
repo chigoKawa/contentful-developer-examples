@@ -13,8 +13,6 @@ type AppPropsWithLayout = AppProps & {
 };
 
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
-
-
   return (
     <>
       <ExperienceComponentRegistration />
@@ -22,6 +20,4 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     </>
   );
   // const getLayout = Component.getLayout ?? ((page) => page);
-
-
 }

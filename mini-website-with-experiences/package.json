@@ -9,14 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@contentful/experiences-sdk-react": "^1.12.0",
+    "@contentful/experiences-sdk-react": "^1.20.0",
     "@contentful/live-preview": "^2.17.3",
     "@contentful/rich-text-react-renderer": "^15.19.3",
-    "@nextui-org/react": "^2.4.6",
+    "@nextui-org/react": "^2.4.8",
     "class-variance-authority": "^0.7.0",
     "classnames": "^2.5.1",
     "contentful": "^10.12.4",
-    "framer-motion": "^11.3.22",
+    "framer-motion": "^11.11.11",
     "negotiator": "^0.6.3",
     "next": "^14.1.4",
     "next-i18n-router": "^5.3.1",

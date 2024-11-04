@@ -2,7 +2,7 @@
 import { cva, cx, type VariantProps } from "class-variance-authority";
 import { FC, HTMLAttributes } from "react";
 import Link from "next/link";
-import { Chip } from "@nextui-org/react";
+import { Chip, Button } from "@nextui-org/react";
 
 export interface IProps
   extends HTMLAttributes<HTMLButtonElement>,
@@ -25,6 +25,7 @@ export const StudioButton: FC<IProps> = ({
   variant = "primary",
   ...ctflProps
 }) => {
+  console.log("ctflProps", ctflProps);
   const handleClick = () => {
     if (sideEffect === "alertMe") {
       alert("You clicked on me");
@@ -44,10 +45,10 @@ export const StudioButton: FC<IProps> = ({
   }
 
   return (
-    <button
+    <Button
       onClick={handleClick}
       className={cx(className, buttonVars({ variant }))}
-      {...ctflProps}
+      // {...ctflProps}
     >
       hello
       {listText &&
@@ -55,7 +56,7 @@ export const StudioButton: FC<IProps> = ({
           return <Chip key={txidx}>Chip</Chip>;
         })}
       {label}
-    </button>
+    </Button>
   );
 };
 

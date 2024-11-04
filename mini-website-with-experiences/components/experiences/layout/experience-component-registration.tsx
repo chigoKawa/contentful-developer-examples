@@ -13,6 +13,8 @@ import { studioImageDefinition } from "@/components/experiences/components/studi
 import { StudioLink } from "@/components/experiences/components/studio-link/studio-link";
 import { studioLinkDefinition } from "@/components/experiences/components/studio-link/studio-link.definition";
 
+import StudioAudioPlayer from "../components/studio-audio-player/audio-player";
+import { studioAudioPlayerDefinition } from "../components/studio-audio-player/studio-audio-player.definition";
 import { StudioHero } from "@/components/experiences/components/studio-hero/studio-hero";
 import { studioHeroDefinition } from "@/components/experiences/components/studio-hero/studio-hero.definition";
 
@@ -31,6 +33,16 @@ const components = [
   { component: StudioHero, definition: studioHeroDefinition },
   { component: StudioCard, definition: studioCardDefinition },
   { component: StudioAnnouncement, definition: studioAnnouncementDefinition },
+
+  {
+    component: StudioAudioPlayer,
+    definition: studioAudioPlayerDefinition,
+    options: {
+      wrapComponent: true,
+      // wrapContainer: 'span'
+      // wrapContainerWidth: '100%'
+    },
+  },
 ];
 
 // Register components
@@ -44,6 +56,7 @@ defineComponents(
       CONTENTFUL_COMPONENTS.text.id,
       CONTENTFUL_COMPONENTS.image.id,
     ],
+    // enabledBuiltInComponents: [], // disables all built-in components
   } // Defined built-in components
 );
 

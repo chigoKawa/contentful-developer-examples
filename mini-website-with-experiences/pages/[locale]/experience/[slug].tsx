@@ -34,7 +34,7 @@ const Page = ({
       <div className=" w-full">
         <Nav />
       </div>
-      <div className="min-h-screen">
+      <div className="min-h-screen w-full">
         <ExperienceRoot experience={experienceJSON} locale={localeCode} />
       </div>
 
