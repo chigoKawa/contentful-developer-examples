@@ -25,6 +25,8 @@ import studioCardDefinition from "../components/studio-card/studio-card.definiti
 import { StudioAnnouncement } from "../components/studio-announcement/studio-announcement";
 import { studioAnnouncementDefinition } from "../components/studio-announcement/studio-announcement.definition";
 
+import TestComponent from "../components/test-component/test-component";
+import { testComponentDefinition } from "../components/test-component/test-component-definition";
 // Define components
 const components = [
   { component: StudioButton, definition: studioButtonDefinition },
@@ -32,6 +34,7 @@ const components = [
   { component: StudioLink, definition: studioLinkDefinition },
   { component: StudioHero, definition: studioHeroDefinition },
   { component: StudioCard, definition: studioCardDefinition },
+  { component: TestComponent, definition: testComponentDefinition },
   { component: StudioAnnouncement, definition: studioAnnouncementDefinition },
 
   {

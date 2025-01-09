@@ -26,6 +26,7 @@ export const StudioButton: FC<IProps> = ({
   ...ctflProps
 }) => {
   console.log("ctflProps", ctflProps);
+
   const handleClick = () => {
     if (sideEffect === "alertMe") {
       alert("You clicked on me");
@@ -50,11 +51,6 @@ export const StudioButton: FC<IProps> = ({
       className={cx(className, buttonVars({ variant }))}
       // {...ctflProps}
     >
-      hello
-      {listText &&
-        listText?.map((txt, txidx) => {
-          return <Chip key={txidx}>Chip</Chip>;
-        })}
       {label}
     </Button>
   );

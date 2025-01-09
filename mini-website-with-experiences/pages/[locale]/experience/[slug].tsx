@@ -16,26 +16,27 @@ const localeCode = "en-US";
 const SLUG = "homepage";
 
 const Page = ({
-  experienceJSON,
-  stylesheet,
+  experienceEntryJSON,
+  experienceStyles,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-  console.log("parsedExperience", experienceJSON);
+  console.log("parsedExperience", experienceEntryJSON);
   return (
     <div className="w-full">
-      {stylesheet && (
+      {experienceStyles && (
         <Head>
-          <style data-ssg>{stylesheet}</style>
+          <style data-ssg>{experienceStyles}</style>
         </Head>
       )}
       <ContentfulPageSeo
-        seo={experienceJSON?.entityStore?._experienceEntry?.seo}
+        seo={experienceEntryJSON?.entityStore?._experienceEntry?.seo}
       />
       {/* <pre className="">{JSON.stringify(parsedExperience, null ,2)}</pre> */}
       <div className=" w-full">
         <Nav />
       </div>
+
       <div className="min-h-screen w-full">
-        <ExperienceRoot experience={experienceJSON} locale={localeCode} />
+        <ExperienceRoot experience={experienceEntryJSON} locale={localeCode} />
       </div>
 
       <div className="">
@@ -52,32 +53,33 @@ export const getServerSideProps = async ({
   preview,
   previewData,
 }: GetServerSidePropsContext) => {
-  const experience = await fetchBySlug({
+  const experienceEntry = await fetchBySlug({
     client: true ? previewClient : client, // TBD use the preview state to determine the client
     slug: query?.slug?.toString() || "", //could be fetched from the context
     experienceTypeId,
     localeCode: params?.locale?.toString() || localeCode,
   });
 
+  if (!experienceEntry) {
+    return {
+      notFound: true,
+    };
+  }
+
   // extract the styles from the experience
-  const stylesheet = experience ? detachExperienceStyles(experience) : null;
+  const experienceStyles = experienceEntry
+    ? detachExperienceStyles(experienceEntry)
+    : null;
 
   // experience currently needs to be stringified manually to be passed to the component
-  const experienceJSON: any = experience ? JSON.stringify(experience) : null;
-
-  // const experienceData = experience?.entityStore?.entities.find(
-  //   (entity) =>
-  //     entity?.sys?.type === "Entry" &&
-  //     // entity?.sys?.contentType?.sys?.id === experienceTypeId &&
-  //     entity?.fields?.slug
-  // );
-
-  // console.log("CHIGORIDDIM", experienceData?.sys);
+  const experienceEntryJSON: any = experienceEntry
+    ? JSON.stringify(experienceEntry)
+    : null;
 
   return {
     props: {
-      experienceJSON,
-      stylesheet,
+      experienceEntryJSON,
+      experienceStyles,
     },
   };
 };
